@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jake Racina’s Bingo</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        table { margin: 0 auto; border-collapse: collapse; }
+        td, th {
+            width: 100px; height: 100px;
+            border: 2px solid #0000aa;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jake Racina’s Bingo</h1>
+    <table>
+        <tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr>
+        {% for row in card %}
+        <tr>
+            {% for item in row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
